@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+		<html>
+		<head>
+			<title>Stock Market App</title>
+						<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<style type="text/css">
+	
+	#stock{
+  color: black;
+  font-size: 1em;
+  font-weight: bold; 
+  border: 2px solid black;
+  margin: 10px;
+  margin-right: 10px;
+  width: 150px;
+  height: 20px;
+}
+
+#price{
+  color: maroon;
+  font-size: 1em;
+  font-weight: bold;
+  border: 2px solid black;
+  margin: 10px;
+  margin-right: 10px;
+  width: 150px;
+  height: 20px;
+}
+
+#quantity{
+  color: green;
+  font-size: 1em;
+  font-weight: bold;
+  border: 2px solid black;
+  margin: 10px;
+  margin-right: 10px;
+  width: 150px;
+  height: 20px;
+}
+
+#content{
+  display: block;
+  margin-right:20px;
+  margin-left:20px;
+}
+
+#button{
+  display: block;
+  margin-right:20px;
+  margin-left:30px;
+  
+}
+
+#total{
+  border:2px solid black;
+  width:20%;
+  height:30px;
+  color: maroon;
+  font-weight: bold;
+  font-size: 1em;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top:10px;
+  display: block;
+  
+}
+h2 {
+  color: brown;
+  text-align: center;
+  font-weight: bold;
+  
+}
+
+/*#input{
+  margin-right: 5px;
+  
+}*/
+
+ #box{
+  margin: auto;
+   margin-top: 40px;
+  width: 45%;
+  border: 2px solid black;
+  padding: 10px;
+   border-radius: 15px;
+   background-color:#20B2AA;
+}
+
+</style>
+
+		</head>
+		<body>
+
+
+
+
+<div  id="box">
+
+  <div id="content">
+  <h2>Stock Market App</h2>
+<div id="input">
+Stock: <input class="btn btn-default" text="number" id="stock"> </input>
+
+Price:  <input class="btn btn-default" type="number" id="price"></input>
+
+Quantity: <input class="btn btn-default" type="number" id="quantity"> </input>
+</div>
+
+</div>
+<div id="button">
+  <button class="btn btn-primary" onclick="google()">Google</button>
+  <button class="btn btn-secondary"onclick="calculate()">Calculate</button>
+  <button  class="btn btn-danger" onclick="reset()">Reset</button>
+</div>
+<p class="btn btn-default" id="total"></p>
+
+
+</div>
+
+
+
+<script type="text/javascript">
+	
+function reset(){
+  document.getElementById("total").innerHTML = 0;
+}
+
+function calculate(){
+  var price = document.getElementById("price").value;
+  var quantity = document.getElementById("quantity").value
+   var sum = price * quantity;
+  document.getElementById("total").innerHTML = sum;
+  
+}
+
+function google(){
+  var stock = document.getElementById("stock").value;
+  window.open("https://www.google.com/search?q="+stock);
+
+  
+}
+
+
+</script>
+		</body>
+		</html>		
